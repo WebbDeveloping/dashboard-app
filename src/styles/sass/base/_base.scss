@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+
 *,
 *::after,
 *::before {
@@ -8,10 +11,45 @@
 
 html {
     // This defines what 1rem is
-    font-size: 62.5%;
+    font-size: 62.5%;  //1rem = 10px; 10px/16px = 62.5%
+
+    // @include respond(tab-port){ // width > 600px
+    //     font-size: 50%;// 1 rem = 8px, 8/16 = 50%
+    // }
+    // @include respond(tab-land){ // width > 900px
+    //     font-size: 56.25%; // 1 rem = 8px, 9/16 = 56.25%
+    // }
+    // @include respond(large-desktop){ // width > 1800px
+    //     font-size: 75%; // 1 rem = 12px, 12/16 = 56.25%
+    // }
 }
 
 body {
     box-sizing: border-box;
-    background-color: red;
+    background-color: $color-neutral-200;
+}
+
+.container-default{
+    padding: 0 2.4rem;
+    max-width: 10.92rem;
+    // width: 100%;
+}
+
+.mb-32px{
+    margin-bottom: 32px;
+}
+
+.mr-24px{
+    margin-right: 24px;
+}
+
+
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
 }

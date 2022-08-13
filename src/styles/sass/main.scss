@@ -1,1 +1,20 @@
-@import './base/base'
+@import './abstracts//mixins';
+@import './abstracts/variables';
+@import './abstracts/functions';
+
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+@import './components/card';
+@import './components/btn';
+@import './components/dropdown';
+@import './components/sidebar';
+@import './components/searchbar';
+@import './components/dashboard';
+
+@import './layout/navigation';
+@import './layout/footer';
+
+@import './pages/products';
+@import './pages/home';

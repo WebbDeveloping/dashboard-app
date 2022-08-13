@@ -1,0 +1,27 @@
+.search-bar{
+
+    &__top-search{
+        position: relative;
+        width: 100%;
+        max-width: 30rem;
+    }
+
+    &__input{
+        padding: 1.4rem 1.8rem 1.4rem 4.4rem;
+        min-height: 5rem;
+        color: $color-neutral-800;
+        border-radius: 5.2rem;
+        border: 1px solid $color-neutral-300;
+    }
+}
+
+.search-icon{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 1.8rem;
+    bottom: 0;
+    z-index: 1;
+    font-size: 1.8rem;
+}

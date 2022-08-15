@@ -1,3 +1,22 @@
+.dashboard{
+
+  &__main{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+    &__content{
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    &__main-content{
+      padding: 4.8rem 0px 6.4rem 0px;
+      min-height: 9.2rem;
+    }
+  }
+
+
 .dashboard-main {
   // display: flex;
   // align-items: flex-start;
@@ -7,6 +26,7 @@
 .sidebar-spacer {
   width: 30rem;
   max-width: 30rem;
+  height: 100%;
 }
 
 .dashboard-content {
@@ -17,5 +37,16 @@
 .dashboard-main-content {
   padding: 4.8rem 0 6.4rem 0;
   min-height: 92vh;
-  background-color: #6f7182;
+  background-color: transparent;
+
 }
+
+.w-30{
+  width: 30%;
+}
+
+.w-70{
+  width: 70%
+}
+
+

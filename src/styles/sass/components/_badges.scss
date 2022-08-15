@@ -1,0 +1,43 @@
+.badge{
+    &__secondary{
+        display: inline-block;
+        padding: .7rem 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: $color-neutral-100;
+        border: .1rem solid $color-neutral-300;
+        border-radius: 4rem;
+        box-shadow: $box-shadow-200;
+
+        &--blue{
+            display: inline-block;
+            padding: .7rem 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            text-decoration: none;
+            font-weight: $font-medium;
+            border: .1rem solid $color-neutral-300;
+            border-radius: 4rem;
+            box-shadow: $box-shadow-200;
+            background-color: $color-blue-100;
+            border-color: $color-blue-100;
+            color: $color-primary;
+        }
+
+        &--gray{
+            display: inline-block;
+            padding: .7rem 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            text-decoration: none;
+            font-weight: $font-medium;
+            border: .1rem solid $color-neutral-300;
+            border-radius: 4rem;
+            box-shadow: $box-shadow-200;
+            background-color: $color-neutral-200;
+            border-color:$color-neutral-200;
+            color: $color-neutral-600;
+        }
+    }
+}

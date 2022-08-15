@@ -1,101 +1,97 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 
-export default function Products() {
-  return (
-    <div className="container-default">
-      <div className="mb-32px">
-        <div className="grid-2-column">
-          <div className="empty">
-            <h1 className="display">Dashboard</h1>
-            <p className="text-400">September 1, 2022</p>
-          </div>
-          <div className="empty">
-            <div className="dropdown-wrapper">
-              <div className="dropdown-toggle">
-                <p className="text-200">Last 30 days</p>
-              </div>
-              <div className="dropdown-column-wrapper">
-                <div className="empty">
-                  <div className="grid-1-column">
-                    <a href="/" className="dropdown-link">
-                      1
-                    </a>
-                    <a href="/" className="dropdown-link">
-                      2
-                    </a>
-                    <a href="/" className="dropdown-link">
-                      3
-                    </a>
-                  </div>
+import CalendarFilter from "../components/CalendarFilter";
+import { Module, ModuleCategory, ModuleOrders2, ModuleOrderStatus } from "../components/Module";
+import ModuleAllProducts from "../components/modules/ModuleAllProducts";
+import ModuleOrders from "../components/modules/ModuleOrders";
+import Loading from "../components/Loading";
+
+export default function Products(props) {
+    const [loading, setLoading] = React.useState(true);
+
+    const [cart, setCart] = useState([]);
+    const [users, setUsers] = useState([]);
+    const [products, setProducts] = useState([]);
+
+
+    const getUsers = async () => {
+     await axios.get(`https://fakestoreapi.com/users`).then((res) => {
+        setUsers(res.data);
+        setLoading(false);
+      })
+      .catch((err) => console.log("error", err));
+    };
+
+    const getCarts = async () => {
+       await axios.get(`https://fakestoreapi.com/carts`).then((res) => {
+          setCart(res.data);
+          setLoading(false);
+        })
+        .catch((err) => console.log("error", err));
+      };
+
+      const getProducts = async () => {
+       await axios.get(`https://fakestoreapi.com/products`).then((res) => {
+          setProducts(res.data);
+          setLoading(false);
+        })
+        .catch((err) => console.log("error", err));
+      };
+
+      useEffect(() => {
+        getUsers();
+        getProducts();
+        getCarts();
+      }, []);
+
+// console.log(cart, users, products)
+    return loading ? (
+    <Loading />
+  ) : ( 
+        <div className="">
+            <div className="grid products">
+                <div className="row w-100">
+                    <div className="col-1-of-2">
+                        <h1 className="h4">Dashboard</h1>
+                        <p className="text__400">August 13, 2022</p>
+                    </div>
+                    <div className="col-1-of-2">
+                        <div className="dropdown-wrapper">
+                            <div className="dropdown-toggle ml-auto">
+                                <CalendarFilter  />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="grid-2-column">
-        <div className="module">
-          <div className="empty">
-            <p className="text-200">Total Sales</p>
-            <div className="flex">
-              <h3 className="heading-h3-size">$299,498.00</h3>
-              <p className="color-green-300">28.5%</p>
-              <i className="icon">icon</i>
-            </div>
-            <div className="divider"></div>
-            <img
-              src="https://uploads-ssl.webflow.com/6260849a6eab2a733e282630/62684e1d8a36c6133db906c5_products-top-graph-dashboardly-webflow-template.png"
-              alt="dashboard img"
-            />
-          </div>
-        </div>
-        <div className="module">
-          <div className="grid-2-column">
-            <p className="text-300">Recent Orders</p>
-            <a href="/" className="text-300">
-              See All
-            </a>
-          </div>
-          <div className="divider"></div>
-          <div className="flex">
-            <img
-              src="https://uploads-ssl.webflow.com/6260849a6eab2a733e282630/62684e1d39396d3fbff45d13_iphone-13-order-image-dashboardly-webflow-template.jpg"
-              alt="product img"
-            />
-            <div className="recent-orders-product-image">
-              <div className="MG-right-16px">
-                <div className="MG-bottom-6px">
-                  <p className="text-200">Iphone 13 Pro Max</p>
+            <div className="grid">
+                <div className="row">
+                    <div className="col-2-of-4">
+                        <Module products={products} carts={cart} users={users} />
+                    </div>
+                    <div className="col-2-of-4">
+                        <ModuleOrders products={products} carts={cart} users={users} />
+                    </div>
                 </div>
-                <p className="text-200">10 Minutes Ago</p>
-              </div>
-              <div className="MG-left-auto">
-                <p className="text-200">$1,099.00</p>
-              </div>
             </div>
-          </div>
-          <div className="divider"></div>
-          <div className="flex">
-            <img
-              src="https://uploads-ssl.webflow.com/6260849a6eab2a733e282630/62684e1d39396d3fbff45d13_iphone-13-order-image-dashboardly-webflow-template.jpg"
-              alt="product img"
-            />
-            <div className="recent-orders-product-image">
-              <div className="MG-right-16px">
-                <div className="MG-bottom-6px">
-                  <p className="text-200">Iphone 13 Pro Max</p>
+            <div className="products__grid-1-col">
+                <div className="row">
+                    <div className="">
+                        <ModuleAllProducts products={products}  />
+                    </div>
                 </div>
-                <p className="text-200">10 Minutes Ago</p>
-              </div>
-              <div className="MG-left-auto">
-                <p className="text-200">$1,099.00</p>
-              </div>
             </div>
-          </div>
+            <div className="grid">
+                <div className="row">
+                    <div className="col-1-of-4">
+                        <ModuleCategory />
+                    </div>
+                    <div className="col-3-of-4">
+                        <ModuleOrderStatus />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div className="module"></div>
-      <div className="grid-2-column"></div>
-    </div>
-  );
+    );
 }

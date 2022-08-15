@@ -1,14 +1,17 @@
-
-
+import React, { useEffect, useState } from "react";
 import './App.scss';
-import SideBar from './components/SideBar';
+import axios from 'axios';
 import Home from './pages/Home';
 
 function App() {
+  const [loading, setLoading] = React.useState(true);
+
+// console.log(products, cart, users)
   return (
 <div className="App">
-  <SideBar />
-  <Home />
+  <div className="app-wrapper">
+      <Home />
+  </div>
 </div>
   );
 }

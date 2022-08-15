@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Inter');
-
+@import url('https://fonts.googleapis.com/css?family=Inter:200,300,400,500,600,700,800,900');
 
 *,
 *::after,
@@ -30,10 +29,11 @@ body {
 }
 
 .container-default{
-    padding: 0 2.4rem;
+    padding: 0px 2.4rem;
+    margin: 0 auto;
     max-width: 10.92rem;
-    // width: 100%;
-}
+    min-width: 100%;
+  }
 
 .mb-32px{
     margin-bottom: 32px;

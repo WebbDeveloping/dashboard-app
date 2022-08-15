@@ -86,7 +86,7 @@ export default function SideBar() {
                     {linkList2}
                 </ul>
               </div>
-              <button className="mt-auto btn btn--primary">Get Template</button>
+              <button className="mt-auto btn btn--primary">Try Now For Free</button>
             </div>
           </div>
         </div>

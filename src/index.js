@@ -9,8 +9,8 @@ import './styles/index.scss';
 import './index.css';
 import App from './App';
 import Reports from "./components/Reports";
-import Invoice from './components/invoice';
-import Invoices from "./components/invoices";
+import Invoice from './components/invoices/invoice';
+import Invoices from "./components/invoices/invoices";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

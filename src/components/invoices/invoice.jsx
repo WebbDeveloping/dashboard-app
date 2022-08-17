@@ -3,7 +3,7 @@ import {
     useNavigate,
     useLocation,
   } from "react-router-dom";
-  import { getInvoice, deleteInvoice } from "../data";
+  import { getInvoice, deleteInvoice } from "../../data";
   
   export default function Invoice() {
     let navigate = useNavigate();

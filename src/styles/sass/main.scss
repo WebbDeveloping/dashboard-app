@@ -9,11 +9,13 @@
 @import './components/card';
 @import './components/btn';
 @import './components/badges';
+@import './components/messages/messages';
 @import './components/dropdown';
 @import './components/sidebar';
 @import './components/searchbar';
 @import './components/calendarFilter';
 @import './components/module';
+@import './components/forms';
 @import './components/dashboard';
 
 @import './layout/navigation';
@@ -21,3 +23,4 @@
 
 @import './pages/products';
 @import './pages/home';
+@import './pages/login';

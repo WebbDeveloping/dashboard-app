@@ -1,17 +1,44 @@
-//Done
+import React from 'react';
 export default function ModuleAllProducts(props) {
+    const [formData, setFormData] = React.useState(
+        {
+            productId: false
+        }
+    )
+
+    const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData(prevData => {
+            return {
+                ...prevData,
+                [name]: type === "checkbox" ? value : checked
+            }
+        })
+    }
+
+
 
     const products = props.products;
+    console.log(formData)
 
-
-    let listProducts = () => {
+    let listProducts = () => { 
         return products.slice(0, 7).map(e => {
 
             return (
                 <div key={e.id} className="module__product-table-row center-content">
                     <div className="module--flex-stretch w-70">
-                        <div className="table-item">
-                            <p className="text__100">{e.id}</p>
+                        <div className="flex table-item">
+                            <input onChange={handleChange}
+                                name="productId"
+                                id="productId"
+                                className='mr-12'
+                                type='checkbox'
+                                checked={formData.productId} />
+                            <label
+                                htmlFor="productId"
+                                className="text__100">
+                                {e.id}
+                            </label>
                         </div>
                     </div>
                     <div className="module--flex-stretch">
@@ -72,7 +99,12 @@ export default function ModuleAllProducts(props) {
                 </div>
             </div>
             <div className="module__product-table-row--header">
-                <div className="module--flex text__200">ID</div>
+                <div className="module--flex text__200">
+                    <div className="flex table-title__wrapper">
+                        <input className='mr-12' type='checkbox' />
+                        <p className="table-title__title">ID</p>
+                    </div>
+                </div>
                 <div className="module--flex text__200">Products</div>
                 <div className="module--flex text__200">Category</div>
                 <div className="module--flex text__200">Total Sales</div>

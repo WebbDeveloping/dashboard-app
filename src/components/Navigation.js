@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import {FaBell, FaEnvelopeOpenText, FaUserCircle} from 'react-icons/fa'
+import {FaBell,  FaUserCircle} from 'react-icons/fa'
+import MessageIcon from "./messages/MessageIcon";
 
 export default function Navigation() {
   return (
@@ -19,7 +20,7 @@ export default function Navigation() {
             <FaBell className="dashboard-nav__icon-wrapper--notifications" size={18}/>
           </div>
           <div className="dashboard-nav__icon-wrapper">
-            <FaEnvelopeOpenText className="dashboard-nav__icon-wrapper--notifications" size={18}/>
+            <MessageIcon />
           </div>
             <div className="dashboard-nav__icon-wrapper--profile-details">
                     <FaUserCircle className="dashboard-nav__icon-wrapper--profile" size={28}/>

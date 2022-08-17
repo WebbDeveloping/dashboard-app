@@ -4,8 +4,16 @@
     position: relative;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .z-index-1{
     z-index: 1;
+}
+
+.mr-8{
+    margin-right: .8rem;
 }
 
 .mr-24px{
@@ -22,6 +30,18 @@
 
 .mb-auto{
     margin-bottom: auto;
+}
+
+.mr-24px{
+    margin-bottom: 2.4rem;
+}
+
+.mb-32{
+    margin-bottom: 3.2rem;
+}
+
+.mb-16{
+    margin-bottom: 1.6rem;
 }
 
 .mr-12{
@@ -49,6 +69,17 @@
     &--between{
         display: flex;
         justify-content: space-between;
+    }
+
+    &--center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__column{
+        display: flex;
+        flex-direction: column;
     }
 }
 

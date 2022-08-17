@@ -9,6 +9,13 @@ import Loading from "../components/Loading";
 
 export default function Products(props) {
     const [loading, setLoading] = React.useState(true);
+    const [isShown, setIsShown] = React.useState(false);
+
+    function toggleShown(){
+        // console.log()
+        setIsShown(prevShown => !prevShown)
+    }
+    
 
     const [cart, setCart] = useState([]);
     const [users, setUsers] = useState([]);
@@ -40,7 +47,11 @@ export default function Products(props) {
       };
 
       useEffect(() => {
-        getUsers();
+        // getUsers( prevSquare => {
+        //     return prevSquare.map((square)=>{
+        //        return square.id === id ? {...square, on: !square.on} : square
+        //     })
+        // });
         getProducts();
         getCarts();
       }, []);

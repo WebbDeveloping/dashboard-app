@@ -1,0 +1,27 @@
+.message-icon {
+    position: relative;
+
+    &__wrapper {
+        position: relative;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    &__notification {
+        position: absolute;
+        left: -0.6rem;
+        bottom: -0.6rem;
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        background-color: $color-primary;
+        justify-content: center;
+        align-items: center;
+        color: $color-neutral-100;
+        font-size: 1rem;
+        line-height: 1.11em;
+        height: 1.8rem;
+        width: 1.8rem;
+        border-radius: 50%;
+    }
+}

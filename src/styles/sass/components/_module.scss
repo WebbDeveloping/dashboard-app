@@ -31,9 +31,21 @@
         }
     }
 
+
+
     &__order-image{
         max-width: 6rem;
         margin-right: 1rem;
+    }
+
+    &__inner-container{
+        max-width: 44.4rem;
+
+        &--center{
+            max-width: 44.4rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__divider{

@@ -131,18 +131,27 @@ p, .paragraph-default{
     &__200{
         font-size: 1.4rem;
         &--regular{
+            font-size: 1.4rem;
             font-weight: $font-regular;
         }
         &--medium{
+            font-size: 1.4rem;
             font-weight: $font-medium;
         }
         &--bold{
+            font-size: 1.4rem;
             color: $color-neutral-800;
             font-weight: $font-bold;
         }
 
         &--green{
+            font-size: 1.4rem;
             color: $color-green-300;
+        }
+
+        &--blue{
+            font-size: 1.4rem;
+            color: $color-blue-200;
         }
     }
 

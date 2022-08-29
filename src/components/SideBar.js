@@ -23,7 +23,7 @@ export default function SideBar() {
       <div className="sidebar__logo-section">
         <a href="/" className="sidebar__logo-wrapper--desktop">
           <img
-            src="https://uploads-ssl.webflow.com/6260849a6eab2a733e282630/62a2868d53db6e22af723951_dashly-webflow-template-logo.svg"
+             src="http://ones.flatheme.net/assets/images/client-3.png"
             alt="icon"
             className="sidebar__logo--mobile"
           />
@@ -40,7 +40,7 @@ export default function SideBar() {
         <div className="sidebar__logo-section--mobile">
           <a href="/" className="sidebar__content--mobile-icon">
             <img
-              src="https://uploads-ssl.webflow.com/6260849a6eab2a733e282630/62a2868d53db6e22af723951_dashly-webflow-template-logo.svg"
+              src="http://ones.flatheme.net/assets/images/client-3.png"
               alt="icon"
               className="image"
             />

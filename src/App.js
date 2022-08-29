@@ -11,8 +11,8 @@ function App() {
   return (
 <div className="App">
   <div className="app-wrapper">
-      {/* <Home /> */}
-      <Login />
+      <Home />
+      {/* <Login /> */}
   </div>
 </div>
   );

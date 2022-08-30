@@ -1,0 +1,17 @@
+.profile-page{
+   display: grid;
+
+   .module{
+    overflow: hidden;
+    border-radius: 3rem;
+
+   }
+
+   &__image-banner{
+    min-height: 12.4rem;
+
+    .image{
+        object-fit: cover;
+    }
+   }
+}

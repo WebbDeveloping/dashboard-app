@@ -1,64 +1,69 @@
 .btn {
-    text-align: center;
-    text-decoration: none;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.8rem 2.2rem 1.8rem 2.2rem;
+  font-weight: 700;
+  border-radius: 4.4rem;
+
+  &--primary {
+    color: $color-neutral-100;
+    background-color: $color-primary;
+    // box-shadow: .4rem 1rem 0, $color-btn-shadow;
+    font-size: 1.4rem;
     padding: 1.8rem 2.2rem 1.8rem 2.2rem;
-    font-weight: 700;
-    border-radius: 4.4rem;
 
-    &--primary {
-        color: $color-neutral-100;
-        background-color: $color-primary;
-        // box-shadow: .4rem 1rem 0, $color-btn-shadow;
-        font-size: 1.4rem;
-        padding: 1.8rem 2.2rem 1.8rem 2.2rem;
-
-        &--large {
-            padding: 2rem 3.2rem 2rem 3.2rem;
-            font-size: 1.6rem;
-        }
-
-        &--red{
-            background-color: $color-red-400;
-            color: white;        
-        }
-
-        &--small {
-            padding: 1.2rem 1.8rem 1.2rem 1.8rem;
-            font-size: 1.2rem;
-        }
+    &--large {
+      padding: 2rem 3.2rem 2rem 3.2rem;
+      font-size: 1.6rem;
     }
 
-    &--secondary {
-        padding: 18px 22px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: #e9eaf3;
-        border-radius: 48px;
-        background-color: transparent;
-        font-weight: $font-regular;
-        box-shadow: 0 4px 10px 0 rgb(20 20 43 / 4%);
-        -webkit-transition: border-color 300ms ease, background-color 300ms ease, color 300ms ease, -webkit-transform 300ms ease;
-        transition: border-color 300ms ease, background-color 300ms ease, color 300ms ease, -webkit-transform 300ms ease;
-        transition: border-color 300ms ease, transform 300ms ease, background-color 300ms ease, color 300ms ease;
-        transition: border-color 300ms ease, transform 300ms ease, background-color 300ms ease, color 300ms ease, -webkit-transform 300ms ease;
-        color: #0b0e2c;
-        font-size: 14px;
-        line-height: 1.143em;
-        text-align: center;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        // color: rgb(11, 14, 44);
-        // background-color: rgb(255, 255, 255);
-        // border-color: rgb(233, 234, 243);
-
-        &--large {
-            padding: 2rem 3.2rem 2rem 3.2rem;
-            font-size: 1.6rem;
-        }
-
-        &--small {
-            padding: 1.2rem 1.8rem 1.2rem 1.8rem;
-            font-size: 1.2rem;
-        }
+    &--red {
+      background-color: $color-red-400;
+      color: white;
     }
+
+    &--small {
+      padding: 1.2rem 1.8rem 1.2rem 1.8rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &--secondary {
+    padding: 18px 22px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e9eaf3;
+    border-radius: 48px;
+    background-color: transparent;
+    font-weight: $font-regular;
+    box-shadow: 0 4px 10px 0 rgb(20 20 43 / 4%);
+    -webkit-transition: border-color 300ms ease, background-color 300ms ease,
+      color 300ms ease, -webkit-transform 300ms ease;
+    transition: border-color 300ms ease, background-color 300ms ease,
+      color 300ms ease, -webkit-transform 300ms ease;
+    transition: border-color 300ms ease, transform 300ms ease,
+      background-color 300ms ease, color 300ms ease;
+    transition: border-color 300ms ease, transform 300ms ease,
+      background-color 300ms ease, color 300ms ease,
+      -webkit-transform 300ms ease;
+    color: #0b0e2c;
+    font-size: 14px;
+    line-height: 1.143em;
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    // color: rgb(11, 14, 44);
+    // background-color: rgb(255, 255, 255);
+    // border-color: rgb(233, 234, 243);
+
+    &--large {
+      padding: 2rem 3.2rem 2rem 3.2rem;
+      font-size: 1.6rem;
+    }
+
+    &--small {
+      padding: 1.2rem 1.8rem 1.2rem 1.8rem;
+      font-size: 1.2rem;
+    }
+  }
 }

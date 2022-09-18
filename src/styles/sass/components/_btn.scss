@@ -17,6 +17,11 @@
             font-size: 1.6rem;
         }
 
+        &--red{
+            background-color: $color-red-400;
+            color: white;        
+        }
+
         &--small {
             padding: 1.2rem 1.8rem 1.2rem 1.8rem;
             font-size: 1.2rem;

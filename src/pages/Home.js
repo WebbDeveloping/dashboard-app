@@ -17,6 +17,7 @@ import Products from './Products';
 import Login from "../components/auth/Login";
 import Pricing from '../pages/Pricing'
 import ProfilePage from "../components/profile/ProfilePage";
+import Dashboard from "./Dashboard";
 export default function Home(props) {
 
     const [links, setLinks] = React.useState([
@@ -32,7 +33,7 @@ export default function Home(props) {
         "Utility Pages",
         "Account"
     ]);
-    
+
     return (
         <div className="dashboard__main">
             <div className="sidebar-spacer w-30">
@@ -58,7 +59,7 @@ export default function Home(props) {
                         <div className="sidebar__logo-section--mobile">
                             <a href="/" className="sidebar__content--mobile-icon">
                                 <img
-                                     src="logo http://ones.flatheme.net/assets/images/client-3.png"
+                                    src="logo http://ones.flatheme.net/assets/images/client-3.png"
                                     alt="icon"
                                     className="image"
                                 />
@@ -101,7 +102,7 @@ export default function Home(props) {
                                         })}
                                     </ul>
                                 </div>
-                                <button className="mt-auto btn btn--primary">Try Now For Free</button>
+                                <button className="mt-auto btn btn--primary--red">Try Now For Free</button>
                             </div>
                         </div>
                     </div>
@@ -115,6 +116,7 @@ export default function Home(props) {
                     <div className="container-default">
                         <Routes>
                             <Route path="/" element={Home} />
+                            <Route path="/Dashboard" element={<Dashboard />} />
                             <Route path="/Products" element={<Products />} />
                             <Route path="/Pricing" element={<Pricing />} />
                             <Route path="/Account" element={<ProfilePage />} />
